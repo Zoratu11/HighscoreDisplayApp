@@ -1,0 +1,24 @@
+﻿<div class="row no-gutters m-2">
+    <div class="card col-sm-12 col-md-10 col-lg-8 mx-auto shadow">
+        <div class="card-header text-center">
+            <h2 class="m-0">Enter your highscore!</h2>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("AddScores", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <input name="Username" type="text" class="form-control" placeholder="Username" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="HighScore" type="number" class="form-control" placeholder="High Score!" />
+                </div>
+                <button type="submit" class="btn btn-block btn-primary mt-4">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>

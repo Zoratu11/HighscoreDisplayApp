@@ -1,0 +1,27 @@
+﻿@using HighscoreDisplayApp.Models;
+@model List<Score>
+
+<div class="row no-gutters m-2">
+    <div class="card col-sm-12 col-md-10 col-lg-10 mx-auto shadow">
+        <div class="card-header text-center">
+            <h2 class="m-0">High Scores!</h2>
+        </div>
+        <div class="card-body">
+            @foreach(var score in Model)
+            {
+                <input type="hidden" name="Id" value="@score.Id" />
+                <div class="row mb-4">
+                    <div class="col">
+                        @score.Username
+                    </div>
+                    <div class="col">
+                        @score.EmailAddress
+                    </div>
+                    <div class="col">
+                        @score.HighScore
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
